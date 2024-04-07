@@ -42,9 +42,27 @@
 }
 
 .image{
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: -490px;
+
+   display: flex;
+  justify-content: center;
+  margin-bottom: -600px;
+margin-left: 300px;
+}
+
+
+.image img{
+
+  height: 300px;
+  width: 350px;
+  background-color: rgb(233, 233, 233);
+ border-radius: 50%;
+ margin-top: 200px;
+
+}
+
+
+.home{
+  margin-top: -500px;
 }
 
 #home-content{
@@ -84,19 +102,30 @@
     box-shadow: 0 0 20px aqua;
 }
 
+
+
 .skills{
-    padding: 70px 10%;
-    justify-content: space-evenly;
+    
     font-size: 27px;
     line-height:1.4;
+}
+
+
+#skill-text{
+  margin-left: -970px;
+  padding-top: 80px;
 }
 
 .skill-image img{
     width: 150px;
     height: 150px;
-    padding-top: 50px;
-    margin-left: 180px;
+    padding-top: 80px;
+    padding-right: 50px;
+    /* margin-left: 180px; */
     line-height:1.4;
+    /* padding: 70px 10%; */
+    justify-content: space-between; 
+    
 }
 
 
@@ -107,6 +136,7 @@
     line-height:1.4;
     /* margin-bottom: .5rem; */
     padding: 70px 10%;
+  
     
 }
 
@@ -130,7 +160,8 @@
     font-weight: 13px;
     border-radius: 20px;
     border-right: 10px;
-    box-shadow: 1px 1px 1px 2px blue ;
+    box-shadow: 1px 1px 1px 2px blue;
+   
 }
 
 #feature-list div:hover{
@@ -304,8 +335,8 @@
       width: 25px;
       height: 25px;
       border-radius: 50%;
-      border: 2px solid rgb(76, 90, 90);
-      color: rgb(23, 80, 80);
+      border: 2px solid rgb(165, 108, 136);
+      color: rgb(12, 243, 243);
       text-decoration: none;
   }
   
@@ -313,5 +344,184 @@
       background: aqua;
       color:black;
       box-shadow: 0 0 20px aqua;
+  }
+  
+
+  /* Default styles for your portfolio */
+
+/* Media query for screens smaller than 768px (typical smartphones) */
+
+@media screen and (max-width: 430px) {  /*bigger-than-mobile media query*/
+    body{
+      justify-content: center;
+      text-align: center;
+    }
+  
+  #home-content{
+        justify-content: left;
+        text-align: left;
+        width: 300px;
+
+    }
+
+    .image img{
+
+      margin-bottom: 270px;
+      margin-right: 350px;
+    }
+
+    #features{
+      margin-right: 350px;
+    }
+
+    .find{
+      justify-content: left;
+      text-align: left;
+
+    }
+
+    .skills{
+        text-align: center;
+    }
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+    }
+    .navbar a {
+      margin: 10px 0;
+    }
+    .image {
+      text-align: center;
+    }
+    .home {
+      text-align: center;
+    }
+
+    .home-content{
+        justify-content: left;
+    }
+    .find {
+      margin-top: 20px;
+    }
+
+    .image{
+
+        margin-bottom: 200px;
+    }
+  }
+
+
+
+
+
+@media (max-width: 767px) {
+    /* Adjust styles for smaller screens here */
+    
+    body{
+      justify-content: center;
+      text-align: center;
+    }
+  
+  #home-content{
+        justify-content: center;
+        text-align: center;
+        width: 300px;
+
+    }
+
+    .image img{
+
+      margin-bottom: 320px;
+      margin-left: -350px;
+    }
+
+    #features{
+      margin-left: 50px;
+    }
+
+    .class{
+
+      margin-left: 70px;
+    }
+
+    .find{
+      margin-top: 20px;    
+
+    }
+
+    .skills{
+        text-align: center;
+    }
+
+    .skill-image img{
+
+      padding-left: 100px;
+    } 
+
+
+
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+    }
+    .navbar a {
+      margin: 10px 0;
+    }
+    .image {
+      text-align: center;
+    }
+    .home {
+      text-align: center;
+    }
+
+    .home-content{
+        justify-content: left;
+    }
+  
+
+    .image{
+
+        margin-bottom: 200px;
+    }
+  }
+  
+  
+  /* Media query for screens between 768px and 991px (small tablets) */
+  @media (min-width: 768px) and (max-width: 991px) {
+    /* Adjust styles for small tablets here */
+    .navbar a {
+      margin: 0 15px;
+    }
+    .home {
+      padding: 50px;
+    }
+
+    .home-content{
+        justify-content: left;
+    }
+
+    .image{
+
+        margin-bottom: 200px;
+    }
+  }
+  
+  /* Media query for screens between 992px and 1199px (larger tablets and desktops) */
+  @media (min-width: 992px) and (max-width: 1199px) {
+    /* Adjust styles for larger tablets and desktops here */
+    .image {
+      width: 50%;
+    }
+    .home-content{
+        justify-content: left;
+    }
+  }
+  
+  /* Media query for screens 1200px and above (typical desktops) */
+  @media (min-width: 1200px) {
+    /* Adjust styles for large desktop screens here */
+    .home-content{
+        justify-content: left;
+    }
   }
   
