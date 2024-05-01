@@ -10,9 +10,12 @@
     font-family: sans-serif;
 }
 :root {
-    --bg-color: #a9cfa9;
+    /* --bg-color: #a9cfa9;
     --text-color: #a05a5a;
-    --main-color: #56658f;
+    --main-color: #56658f; */
+    --bg-color: #ECE6DC;
+    --text-color: #555555;
+    --main-color: #34495E;
 }
 
 html{
@@ -25,22 +28,23 @@ body{
     color: var(--text-color);
 }
 
-section{
+/* section{
     min-height: 100vh;
     padding: 10rem 9% 2rem;
-}
+} */
 
 .header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 2rem 9%;
+    /* padding: 2rem 9%; */
     background: var(--bg-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    margin-bottom: 100px;
 }
 
 .logo {
@@ -55,22 +59,40 @@ section{
     color: var(--text-color);
     margin-left: 4rem;
     font-weight: 700;
+    font-weight: 800;
 }
 
 .navbar a:hover, .navbar a.active{
-    color: var(--text-color);
+    color: var(--text);
+    transition: 3s;
+   
+}
+
+.checkbtn{
+    font-style: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+#check{
+    display: none;
 }
 
 #menu-icon {
     font-size: 3.6rem;
     color: var(--text-color);
-    display: ;
+    
 }
 .home{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 100px;
+    margin-top: 100px;
+    margin-bottom: 50px;
 }
 
 .home-content h3{
@@ -163,7 +185,8 @@ span{
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    background: rgb(54, 33, 33);
+    /* background: rgb(54, 33, 33); */
+    background:  rgba(131, 127, 120, 0.582);
 }
 
 .about-img img {
@@ -225,7 +248,7 @@ span{
 
 
 .project h2 {
-    margin-bottom: 5rem;
+    margin-bottom: 30px;
 }
 
 .project-container {
@@ -274,6 +297,7 @@ span{
 
 .contact h2 {
     margin-bottom: 3rem;
+    margin-top: 30px;
 }
 
 .contact form {
@@ -353,8 +377,9 @@ span{
 }
 
 @media (max-width: 991px) {
-    .haeder {
-        padding: 2rem 3%;
+    .skill-image {
+        /* padding: 2rem 3%; */
+        padding: none;
     }
 
     section {
