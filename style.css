@@ -1,5 +1,5 @@
 
-
+ 
 *{
     margin: 0;
     padding: 0;
@@ -10,9 +10,7 @@
     font-family: sans-serif;
 }
 :root {
-    /* --bg-color: #a9cfa9;
-    --text-color: #a05a5a;
-    --main-color: #56658f; */
+   
     --bg-color: #ECE6DC;
     --text-color: #555555;
     --main-color: #34495E;
@@ -28,70 +26,85 @@ body{
     color: var(--text-color);
 }
 
-/* section{
-    min-height: 100vh;
-    padding: 10rem 9% 2rem;
-} */
-
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    /* padding: 2rem 9%; */
-    background: var(--bg-color);
+nav {
+    padding: 10px 30px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    z-index: 100;
-    margin-bottom: 100px;
+    justify-content: space-between;
+    position: relative;
+    background: var(--bg-color);
+    height: 120px;
+  
 }
 
 .logo {
-    font-size: 2.5rem;
     color: var(--text-color);
-    font-weight: 700;
-    cursor: default;
+    font-size: 25px;
 }
 
-.navbar a {
-    font-size: 1.5rem;
+nav ul {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
     color: var(--text-color);
-    margin-left: 4rem;
-    font-weight: 700;
-    font-weight: 800;
+    font-size: 25px;
 }
 
-.navbar a:hover, .navbar a.active{
-    color: var(--text);
-    transition: 3s;
-   
-}
-
-.checkbtn{
-    font-style: 30px;
-    color: white;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-    cursor: pointer;
-}
-
-#check{
+.menu-icon {
     display: none;
 }
 
-#menu-icon {
-    font-size: 3.6rem;
+.menu-icon i {
     color: var(--text-color);
-    
+    font-size: 30px; /* Corrected */
 }
+
+@media (max-width: 600px) {
+    nav ul {
+        position: absolute;
+        top: 50px; /* Adjust this according to your header height */
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        color: var(--text-color);
+        gap: 0;
+        overflow: hidden;
+        background: var(--bg-color); /* Optional: To match background color */
+        max-height: 0;
+        transition: max-height 0.5s ease; /* Transition max-height for smooth animation */
+    }
+
+    nav ul.show {
+        max-height: 200px; /* Adjust as needed */
+    }
+
+    nav ul li {
+        padding: 20px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+
+
+
 .home{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 100px;
-    margin-top: 100px;
+    margin-top: 400px;
     margin-bottom: 50px;
 }
 
@@ -370,6 +383,8 @@ span{
 }
 
 
+
+
 @media (max-width: 1200px) {
     html {
         font-size: 55%;
@@ -400,10 +415,10 @@ span{
 }
 
 @media (max-width: 760px) {
-    #menu-icon {
+    /* #menu-icon {
         display: block;
-    }
-    .navbar {
+    } */
+    /* .navbar {
         position: absolute;
         top: 100%;
         left: 0;
@@ -413,17 +428,17 @@ span{
         border-top: 1rem solid rgba(0,0,0, .2);
         box-shadow: 0 .5rem 1rem rgba(0,0,0, .2);
         display: none;
-    }
+    } */
 
-    .navbar.active {
+    /* .navbar.active {
         display: block;
-    }
+    } */
 
-    .navbar a {
+    /* .navbar a {
         display: block;
         font-size: 2rem;
         margin: 3rem 0;
-    }
+    } */
 
     .home {
         flex-direction: column;
