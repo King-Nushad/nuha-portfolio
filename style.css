@@ -70,7 +70,7 @@ nav ul li a {
 @media (max-width: 600px) {
     nav ul {
         position: absolute;
-        top: 50px; /* Adjust this according to your header height */
+        top: 70px; /* Adjust this according to your header height */
         left: 0;
         right: 0;
         flex-direction: column;
@@ -84,11 +84,17 @@ nav ul li a {
     }
 
     nav ul.show {
-        max-height: 200px; /* Adjust as needed */
+        max-height: 250px; /* Adjust as needed */
     }
 
     nav ul li {
         padding: 20px;
+        overflow-wrap: normal;
+        font-weight: bold;
+    }
+
+    .logo{
+        font-weight: bold;
     }
 
     .menu-icon {
@@ -104,8 +110,20 @@ nav ul li a {
     justify-content: center;
     align-items: center;
     margin-right: 100px;
-    margin-top: 400px;
+    margin-top: 200px;
     margin-bottom: 50px;
+}
+
+.home-content{
+    animation:3s slide-right;
+}
+@keyframes slide-right {
+    from {
+        margin-left: -100%;
+    }
+    to{
+        margin-left: 0%;
+    }
 }
 
 .home-content h3{
@@ -128,7 +146,8 @@ span{
 }
 
 .home-img img {
-    width: 25vw;
+    width: 300px;
+    
     animation: floatImage 4s ease-in-out infinite;
     border-radius: 2.6rem;
     margin-left: 100px;
@@ -393,8 +412,10 @@ span{
 
 @media (max-width: 991px) {
     .skill-image {
-        /* padding: 2rem 3%; */
+        padding: 2rem 3%;
         padding: none;
+        margin: -16%;
+        
     }
 
     section {
@@ -415,30 +436,7 @@ span{
 }
 
 @media (max-width: 760px) {
-    /* #menu-icon {
-        display: block;
-    } */
-    /* .navbar {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        padding: 1rem 3%;
-        background: var(--bg-color);
-        border-top: 1rem solid rgba(0,0,0, .2);
-        box-shadow: 0 .5rem 1rem rgba(0,0,0, .2);
-        display: none;
-    } */
-
-    /* .navbar.active {
-        display: block;
-    } */
-
-    /* .navbar a {
-        display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
-    } */
+   
 
     .home {
         flex-direction: column;
